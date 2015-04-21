@@ -1,5 +1,5 @@
 class MALAYANBANKINGBERHAD < SingaporeBankCode::Bank
-  def min_length number=nil
+  def min_length
     1
   end
 
@@ -13,9 +13,5 @@ class MALAYANBANKINGBERHAD < SingaporeBankCode::Bank
 
   def number
     9102031012
-  end
-
-  def resolve!
-    [bank_code, branch_code, number]
   end
 end

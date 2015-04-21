@@ -1,11 +1,7 @@
 class POSBPLUS < SingaporeBankCode::Bank
 
-  def min_length number
+  def min_length
     
-  end
-
-  def resolve!
-    [bank_code, branch_code, number]
   end
 
   def bank_code

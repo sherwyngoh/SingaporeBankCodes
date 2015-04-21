@@ -5,19 +5,11 @@ class DBS < SingaporeBankCode::Bank
     1
   end
 
-  def resolve!
-    [bank_code, branch_code, number]
-  end
-
   def bank_code
-    7375
+    '7171'
   end
 
   def branch_code
-    030
-  end
-
-  def number
-    9102031012
+    @number.to_s[0..2]    
   end
 end

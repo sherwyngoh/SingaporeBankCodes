@@ -1,10 +1,6 @@
 class HSBC < SingaporeBankCode::Bank
-  def min_length number=nil
+  def min_length
     10
-  end
-
-  def resolve!
-    [bank_code, branch_code, number]
   end
 
   def bank_code

@@ -4,10 +4,6 @@ class OCBC < SingaporeBankCode::Bank
     10
   end
 
-  def resolve!
-    [bank_code, branch_code, number]
-  end
-
   def bank_code
     7375
   end

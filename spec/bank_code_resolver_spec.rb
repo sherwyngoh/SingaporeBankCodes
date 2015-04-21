@@ -13,19 +13,4 @@ describe BankCodeResolver do
       end
     end
   end
-
-  describe '#get_result' do
-
-    let(:name)            {'UOB'}
-    let(:bank_code)       {7375}
-    let(:branch_code)     {030}
-
-    let(:number)          {9102031012}
-    #no change for UOB
-    let(:resolved_number) {9102031012}
-
-    let(:result) {Result.new(bank_code, branch_code, resolved_number)}
-
-    it {expect(subject.get_result).to eq result}
-  end
 end
