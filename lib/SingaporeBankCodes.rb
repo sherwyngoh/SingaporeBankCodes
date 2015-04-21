@@ -12,14 +12,14 @@ class BankCodeResolver
     @name   = args.fetch(:name)
     @number = args.fetch(:number).to_i
     raise ArgumentError.new "Name(#{@name}) needs to be one of #{BankCodeResolver::BANKS}" unless BankCodeResolver::BANKS.include?(@name)
-    @bank      = Object.const_get(@name.delete(' ').upcase).new(@number)
-    min_length = @bank.min_length
+    @bank_account      = Object.const_get(@name.delete(' ').upcase).new(@number)
+    min_length = @bank_account.min_length
     raise ArgumentError.new "Account number needs to be at least #{min_length}" unless (@number.to_s.length >= min_length)
   end
 
   def get_result
-    @bank_code, @branch_code, @resolved_number = @bank.resolve!
-    Result.new(@bank_code, @branch_code, @resolved_number)
+    @bank_account_code, @branch_code, @resolved_number = @bank_account.resolve!
+    Result.new(@bank_account_code, @branch_code, @resolved_number)
   end
   
 end

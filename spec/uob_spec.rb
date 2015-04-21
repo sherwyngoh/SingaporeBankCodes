@@ -18,4 +18,6 @@ describe UOB do
 
   it {expect(subject.branch_code).to be}
   it {expect(subject.branch_name).to be}
+
+  it {expect(subject.resolved_number).to eq 102031012}
 end

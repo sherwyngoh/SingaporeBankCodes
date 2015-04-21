@@ -1,5 +1,6 @@
 class UOB < SingaporeBankCode::BankAccount
   include UOBBranchCodes
+  
   def min_length
     10
   end
@@ -12,7 +13,7 @@ class UOB < SingaporeBankCode::BankAccount
     end
   end
 
-  def resolve!
-    [bank_code, branch_code, @number]
+  def resolved_number
+    @number
   end
 end
