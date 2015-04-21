@@ -1,6 +1,6 @@
 class POSB < SingaporeBankCode::BankAccount
   def min_length
-    10
+    9
   end
 
   def bank_code
@@ -9,9 +9,5 @@ class POSB < SingaporeBankCode::BankAccount
 
   def branch_code
     '081'
-  end
-
-  def number
-    9102031012
   end
 end

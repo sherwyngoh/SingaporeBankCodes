@@ -6,16 +6,20 @@ module SingaporeBankCode
       @number = number
     end
 
-    def bank_code
+    def branch_code
       @number.to_s[0..2]
     end
 
     def min_length
-      1
+      3
+    end
+
+    def resolved_number
+      @number
     end
 
     def resolve!
-      [bank_code, branch_code, number]
+      [bank_code, branch_code, resolved_number]
     end
   end
 end

@@ -10,8 +10,4 @@ class CITIBANK < SingaporeBankCode::BankAccount
   def branch_code
     030
   end
-
-  def number
-    9102031012
-  end
 end

@@ -1,17 +1,10 @@
 class HSBC < SingaporeBankCode::BankAccount
-  def min_length
-    10
-  end
 
   def bank_code
-    7375
+    '7232'
   end
 
-  def branch_code
-    030
-  end
-
-  def number
-    9102031012
+  def resolved_number
+    @number[3..-1]
   end
 end

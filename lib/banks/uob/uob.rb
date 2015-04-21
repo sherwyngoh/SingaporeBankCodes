@@ -7,9 +7,9 @@ class UOB < SingaporeBankCode::BankAccount
 
   def bank_code
     if (retrieval_code > 500) && (retrieval_code < 509)
-      7199
+      '7199'
     else
-      7375
+      '7375'
     end
   end
 
