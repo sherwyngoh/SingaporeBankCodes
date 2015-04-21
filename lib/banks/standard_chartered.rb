@@ -1,21 +1,17 @@
 class STANDARDCHARTERED < SingaporeBankCode::BankAccount
-  def min_length number=nil
+  def min_length
     10
   end
 
-  def resolve!
-    [bank_code, branch_code, number]
+  def resolved_number
+    @number
   end
 
   def bank_code
-    7375
+    '7144'
   end
 
   def branch_code
-    030
-  end
-
-  def number
-    9102031012
+    '0' + @number[0..1].to_s
   end
 end
