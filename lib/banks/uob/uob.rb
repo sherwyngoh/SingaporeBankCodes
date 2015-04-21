@@ -1,4 +1,4 @@
-class UOB < SingaporeBankCode::Bank
+class UOB < SingaporeBankCode::BankAccount
   include UOBBranchCodes
   def min_length
     10

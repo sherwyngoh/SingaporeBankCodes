@@ -1,4 +1,4 @@
-class DBS < SingaporeBankCode::Bank
+class DBS < SingaporeBankCode::BankAccount
   attr_accessor :number
   
   def min_length number=nil

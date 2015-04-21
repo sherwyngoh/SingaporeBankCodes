@@ -1,4 +1,4 @@
-class MALAYANBANKINGBERHAD < SingaporeBankCode::Bank
+class MALAYANBANKINGBERHAD < SingaporeBankCode::BankAccount
   def min_length
     1
   end

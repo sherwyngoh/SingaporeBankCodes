@@ -1,8 +1,9 @@
-class OCBC < SingaporeBankCode::Bank
+class OCBC < SingaporeBankCode::BankAccount
 
   def min_length number=nil
     10
   end
+  
 
   def bank_code
     7375

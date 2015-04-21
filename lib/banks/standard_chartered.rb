@@ -1,4 +1,4 @@
-class STANDARDCHARTERED < SingaporeBankCode::Bank
+class STANDARDCHARTERED < SingaporeBankCode::BankAccount
   def min_length number=nil
     10
   end

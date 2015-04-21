@@ -1,4 +1,4 @@
-class HSBC < SingaporeBankCode::Bank
+class HSBC < SingaporeBankCode::BankAccount
   def min_length
     10
   end

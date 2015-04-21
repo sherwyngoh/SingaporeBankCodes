@@ -1,4 +1,4 @@
-class CITIBANK < SingaporeBankCode::Bank
+class CITIBANK < SingaporeBankCode::BankAccount
   def min_length
     10
   end

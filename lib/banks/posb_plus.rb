@@ -1,4 +1,4 @@
-class POSBPLUS < SingaporeBankCode::Bank
+class POSBPLUS < SingaporeBankCode::BankAccount
 
   def min_length
     

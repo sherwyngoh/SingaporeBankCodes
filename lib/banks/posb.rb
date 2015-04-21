@@ -1,4 +1,4 @@
-class POSB < SingaporeBankCode::Bank
+class POSB < SingaporeBankCode::BankAccount
   def min_length
     10
   end

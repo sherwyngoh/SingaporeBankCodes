@@ -1,7 +1,7 @@
 module SingaporeBankCode
-  class Bank
+  class BankAccount
     attr_accessor :number, :branch_name
-    
+
     def initialize number
       @number = number
     end
