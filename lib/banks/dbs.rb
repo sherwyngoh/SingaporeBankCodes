@@ -1,7 +1,7 @@
 module Bank
   class DBS
-    def min_length number
-      
+    def min_length number=nil
+      1
     end
 
     def resolve!

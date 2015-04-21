@@ -1,7 +1,7 @@
 module Bank
-  class UOB
-    def min_length number=nil
-      10
+  class POSBPLUS
+    def min_length number
+      
     end
 
     def resolve!
@@ -18,10 +18,6 @@ module Bank
 
     def number
       9102031012
-    end
-    
-    def branch_code_retrieval_code
-      number.to_s[0..2]
     end
   end
 end

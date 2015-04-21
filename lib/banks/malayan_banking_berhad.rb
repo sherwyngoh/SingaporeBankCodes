@@ -1,11 +1,7 @@
 module Bank
   class MALAYANBANKINGBERHAD
-    def min_length number
-      
-    end
-
-    def resolve!
-      [bank_code, branch_code, number]
+    def min_length number=nil
+      1
     end
 
     def bank_code
@@ -18,6 +14,10 @@ module Bank
 
     def number
       9102031012
+    end
+
+    def resolve!
+      [bank_code, branch_code, number]
     end
   end
 end

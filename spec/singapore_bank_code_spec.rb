@@ -3,9 +3,10 @@ require 'spec_helper'
 describe SingaporeBankCode do
   subject { SingaporeBankCode.new(name: name, number: number) }
 
-  describe 'Right parameters' do
+  describe 'Valid parameters' do
     context 'with valid bank' do
-      let(:name) {['OCBC', 'DBS', 'UOB', 'FEB', 'POSB', 'POSBPlus', 'HSBC', 'Standard Chartered', 'CITIBANK', 'Malayan Banking Berhad'].sample}
+      # 'FEB'
+      let(:name) {['OCBC', 'DBS', 'UOB', 'POSB', 'POSBPlus', 'HSBC', 'Standard Chartered', 'CITIBANK', 'Malayan Banking Berhad'].sample}
       let(:number) {1234567890}
       it 'should not raise any error' do
         expect(subject).to be      
