@@ -8,5 +8,5 @@ describe STANDARDCHARTERED do
   it {expect(subject.branch_code).to eq '018'}
   it {expect(subject.bank_code).to eq '7144'}
   it {expect(subject.resolved_number).to eq '1803645852'}
-
+  it {expect(subject.branch_name).to eq 'Jurong'}
 end
