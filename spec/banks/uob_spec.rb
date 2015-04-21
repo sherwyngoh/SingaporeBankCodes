@@ -1,12 +1,6 @@
-
-
 describe UOB do
   let(:subject) {UOB.new(number)}
   let(:number) {'102031012'}
-
-  describe "#min_length" do
-    it {expect(subject.min_length).to eq 10}
-  end
 
   describe "#bank_code" do
     context "for account numbers with retrieval code between 501 and 509, inclusive" do
@@ -16,6 +10,7 @@ describe UOB do
     it {expect(subject.bank_code).to eq '7375'}
   end
 
+  it {expect(subject.min_length).to eq 10}
   it {expect(subject.branch_code).to be}
   it {expect(subject.branch_name).to be}
 

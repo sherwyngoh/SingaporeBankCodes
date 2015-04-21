@@ -11,7 +11,7 @@ module SingaporeBankCode
     end
 
     def min_length
-      3
+      4
     end
 
     def resolved_number
