@@ -10,6 +10,10 @@ module SingaporeBankCode
       @number.to_s[0..2]
     end
 
+    def branch_name
+      reference_hash_collection[branch_code] rescue 'Branch not registered'
+    end
+
     def min_length
       4
     end
@@ -19,7 +23,7 @@ module SingaporeBankCode
     end
 
     def resolve!
-      [bank_code, branch_code, resolved_number]
+      [bank_code, branch_code, branch_name, resolved_number]
     end
   end
 end
