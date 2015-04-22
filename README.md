@@ -1,6 +1,6 @@
 # SingaporeBankCodes
 This gem allows you to provide a bank name and account number, and will generate the branch code, bank code, and branch name. Singapore banks only. Currently serviced banks are:
- ['OCBC', 'DBS', 'UOB', 'FEB', 'POSB', 'POSB Plus', 'HSBC', 'Standard Chartered', 'CITIBANK', 'Malayan Banking Berhad']
+ ['OCBC', 'DBS', 'UOB', 'FEB', 'POSB', 'HSBC', 'Standard Chartered', 'CITIBANK', 'Malayan Banking Berhad']
 
 ## Installation
 
