@@ -1,12 +1,9 @@
 require 'require_all'
-require "SingaporeBankCodes/version"
-require_all 'lib/banks/**/*.rb'
-
-Result = Struct.new(:bank_code, :branch_code, :resolved_number)
+require_all 'lib'
 
 class BankCodeResolver
   BANKS = ['OCBC', 'DBS', 'UOB', 'FEB', 'POSB', 'POSB Plus', 'HSBC', 'Standard Chartered', 'CITIBANK', 'Malayan Banking Berhad']
-  attr_accessor :name, :number, :bank
+  attr_accessor :name, :number
 
   def initialize(args)
     @name   = args.fetch(:name)
@@ -17,9 +14,18 @@ class BankCodeResolver
     raise ArgumentError.new "Account number needs to be at least #{min_length}" unless (@number.to_s.length >= min_length)
   end
 
+  def self.bank_options
+    BankCodeResolver::BANKS
+  end
+
   def get_result
-    @bank_account_code, @branch_code, @resolved_number = @bank_account.resolve!
-    Result.new(@bank_account_code, @branch_code, @resolved_number)
+    @bank_code, @branch_code, @resolved_number = @bank_account.resolve!
+    {
+      'bank_account' => @bank_code, 
+      'branch_code' => @branch_code, 
+      'branch_name' => @branch_name,
+      'resolved_account_number' => @resolved_number,
+    }
   end
   
 end

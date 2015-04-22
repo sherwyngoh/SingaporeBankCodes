@@ -19,8 +19,13 @@ Or install it yourself as:
     $ gem install SingaporeBankCodes
 
 ## Usage
+```ruby
+bank_account = BankCodeResolver.new(name: 'POSB', account: '123456789')
+bank_account.resolve!
+#returns a hash with keys bank_code, branch_code, branch_name and resolved account number, which can be different from supplied account number
+BankCodeResolver.bank_options #for possible bank names
+```
 
-TODO: Write usage instructions here
 
 ## Contributing
 
