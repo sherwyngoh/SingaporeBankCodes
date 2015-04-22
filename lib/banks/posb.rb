@@ -8,6 +8,12 @@ class POSB < SingaporeBankCode::BankAccount
   end
 
   def branch_code
-    '081'
+    if @number.to_s.length == 9
+      '081'
+    else
+      dbs = DBS.new(@number)
+      dbs.reference_hash_collection[dbs.branch_code]
+      #to
+    end
   end
 end
