@@ -1,5 +1,3 @@
-require 'set'
-
 module UOBBranchCodes
   def branch_code
     reference_hash.fetch(:branch_code)
