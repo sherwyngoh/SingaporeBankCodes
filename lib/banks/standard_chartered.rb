@@ -3,10 +3,6 @@ class STANDARDCHARTERED < SingaporeBankCode::BankAccount
     10
   end
 
-  def resolved_number
-    @number
-  end
-
   def bank_code
     '7144'
   end
