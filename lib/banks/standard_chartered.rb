@@ -7,6 +7,10 @@ class STANDARDCHARTERED < SingaporeBankCode::BankAccount
     '7144'
   end
 
+  def swift_code
+    'SCBLSGSGXXX'
+  end
+
   def branch_code
     '0' + @number[0..1].to_s
   end

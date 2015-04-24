@@ -3,6 +3,10 @@ class CITIBANK < SingaporeBankCode::BankAccount
     '7214'
   end
 
+  def swift_code
+    'CITISGSGGCB'
+  end
+
   def reference_hash_collection
     {
       '001' => 'Shenton Way - IB',

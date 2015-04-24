@@ -26,8 +26,12 @@ module SingaporeBankCode
       @number
     end
 
+    def swift_code
+      'N/A'
+    end
+
     def resolve!
-      [bank_code, branch_code, branch_name, resolved_number]
+      [bank_code, branch_code, branch_name, resolved_number, swift_code]
     end
   end
 end

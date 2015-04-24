@@ -7,6 +7,10 @@ class POSB < SingaporeBankCode::BankAccount
     '7171'
   end
 
+  def swift_code
+    'DBSSSGSGXXX'
+  end
+
   def branch_code
     if @number.to_s.length == 9
       '081'

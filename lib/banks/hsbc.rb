@@ -4,6 +4,10 @@ class HSBC < SingaporeBankCode::BankAccount
     '7232'
   end
 
+  def swift_code
+    'HSBCSGSGXXX'
+  end
+
   def resolved_number
     @number[3..-1]
   end

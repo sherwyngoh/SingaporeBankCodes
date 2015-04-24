@@ -7,6 +7,10 @@ class DBS < SingaporeBankCode::BankAccount
     '7171'
   end
 
+  def swift_code
+    'DBSSSGSGXXX'
+  end
+  
   def reference_hash_collection
     {
       '001' => 'DBS Shenton Way',
