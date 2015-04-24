@@ -11,20 +11,19 @@ require_relative './banks/standard_chartered'
 
 
 class BankCodeResolver
-  BANKS = ['OCBC', 'DBS', 'UOB', 'FEB', 'POSB', 'POSB Plus', 'HSBC', 'Standard Chartered', 'CITIBANK', 'Malayan Banking Berhad']
   attr_accessor :name, :number
 
   def initialize(args)
-    @name   = args.fetch(:name)
+    @name   = args.fetch(:name).delete(' ').upcase
     @number = args.fetch(:number)
-    raise ArgumentError.new "Name(#{@name}) needs to be one of #{BankCodeResolver::BANKS}" unless BankCodeResolver::BANKS.include?(@name)
+    raise ArgumentError.new "Name(#{@name}) needs to be one of #{BankCodeResolver.bank_options}" unless BankCodeResolver.bank_options.include?(@name)
     @bank_account      = Object.const_get(@name.delete(' ').upcase).new(@number)
     min_length = @bank_account.min_length
     raise ArgumentError.new "Account number needs to be at least #{min_length}" unless (@number.to_s.length >= min_length)
   end
 
   def self.bank_options
-    BankCodeResolver::BANKS
+    SingaporeBankCode::BankAccount.decendants
   end
 
   def get_result

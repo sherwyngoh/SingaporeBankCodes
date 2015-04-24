@@ -5,8 +5,7 @@ describe BankCodeResolver do
 
   describe 'Valid parameters' do
     context 'with valid bank' do
-      # 'FEB'
-      let(:name) {['OCBC', 'DBS', 'UOB', 'POSB', 'POSB Plus', 'HSBC', 'Standard Chartered', 'CITIBANK', 'Malayan Banking Berhad'].sample}
+      let(:name) {['OCBC', 'DBS', 'UOB', 'POSB', 'HSBC', 'Standard Chartered', 'CITIBANK', 'Malayan Banking Berhad'].sample}
       let(:number) {1234567890}
       it 'should not raise any error' do
         expect(subject).to be      

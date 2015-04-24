@@ -2,6 +2,10 @@ module SingaporeBankCode
   class BankAccount
     attr_accessor :number
 
+    def self.decendants
+      ObjectSpace.each_object(Class).select { |klass| klass < self }.map(&:to_s)
+    end
+
     def initialize number
       @number = number
     end
