@@ -29,10 +29,10 @@ class BankCodeResolver
   def get_result
     bank_code, branch_code, branch_name, resolved_number, swift_code = @bank_account.resolve!
     {
-      'bank_account' => bank_code, 
+      'bank_code' => bank_code, 
       'branch_code' => branch_code, 
       'branch_name' => branch_name,
-      'resolved_account_number' => resolved_number,
+      'account_number' => resolved_number,
       'swift_code' => swift_code
     }
   end
